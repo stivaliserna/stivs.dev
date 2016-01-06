@@ -20,12 +20,12 @@
   font-size: 55px;  
   font-family: century gothic, sans-serif;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
   text-shadow: none;
 }
 
-.jumbotron p {
+.jumbotron h2 {
   font-size: 30px;
   color: #202020;
   font-family: century gothic;
@@ -34,7 +34,7 @@
   text-shadow: none;
 }
 
-.jumbotron div div p {
+.jumbotron p {
 
   font-family: palatino;
   color: #444444;
@@ -43,7 +43,7 @@
   text-shadow: none;
 }
 
-.jumbotron div img {
+.jumbotron ul img {
     width: 25px;
     height: 25px;
     margin-right: 10px;
