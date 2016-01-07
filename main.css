@@ -1,9 +1,10 @@
-.nav li {
-  display: inline;
+.nav p {
+  text-align: right;
   color: #b8b8b8;
   font-size: 20px;
   padding: 14px 10px;
-  font-family: palatino linotype;
+  font-family: Crimson Text;
+  margin-top: 15px;
 }
 
 .jumbotron {
@@ -18,9 +19,9 @@
 .jumbotron h1 {
   color: #202020;
   font-size: 55px;  
-  font-family: century gothic, sans-serif;
-  font-weight: bold;
-  margin-top: 30px;
+  font-family: Open Sans;
+  font-weight: 800;
+  margin-top: 20px;
   text-align: center;
   text-shadow: none;
 }
@@ -28,7 +29,7 @@
 .jumbotron h2 {
   font-size: 30px;
   color: #202020;
-  font-family: century gothic;
+  font-family: Open Sans;
   text-align: center;
   margin-top: 20px;
   text-shadow: none;
@@ -36,7 +37,7 @@
 
 .jumbotron p {
 
-  font-family: palatino;
+  font-family: serif;
   color: #444444;
   font-size: 20px;
   margin-top: 0px;
@@ -44,30 +45,23 @@
   text-align: center;
 }
 
-.jumbotron ul img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    margin-top: 20px;
-}
-
-.jumbotron li {
-    display: inline;
+.jumbotron ul li a i {
+    margin-top: 15px;
+    color: black;
+    font-size: 1.9em;
 }
 
 .learn-more h3 {
-    color: #393c3d;
+    color: #171717;
     font-size: 20px;
     text-align: center;
-    font-family: century gothic;
-    font-weight: bold;
-
+    font-family: Open Sans;
 }
 
 .learn-more p {
     font-size: 15px;
     margin-bottom: 13px;
     text-align: center;
-    font-family: century gothic;
+    font-family: Open Sans;
     color: #202020;
 }
