@@ -8,15 +8,11 @@
 }
 
 .jumbotron {
-<<<<<<< HEAD
   border-color: #CE1D41;
-=======
-  border-color: FA2D38;
->>>>>>> 19adf37192aaee20e92a930eb822c34306323fc0
   border-style: solid;
   border-width: 50px 100px 50px 100px;
   position: relative;
-  top:10px;
+  margin-top:10px;
   background-color: #f7f7f7;
 }
 
@@ -68,4 +64,40 @@
     text-align: center;
     font-family: Open Sans;
     color: #202020;
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .nav p {
+    font-size: 15px;
+    margin-bottom: -10px;
+  }
+
+  .jumbotron {
+      border-width: 25px;
+  }
+
+  .jumbotron h1 {
+      font-size: 30px;
+  }
+
+  .jumbotron h2 {
+      font-size: 20px;
+  }
+
+  .jumbotron p {
+      font-size: 15px;
+  }
+
+  .jumbotron ul li a i {
+     font-size: 1.5em;
+  }
+
+  .learn-more h3 {
+      font-size: 15px;
+      margin-top: -7px;
+  }
+
+  .learn-more p {
+      font-size: 13px;
+  }
 }
