@@ -66,7 +66,7 @@
     color: #202020;
 }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) {
   .nav p {
     font-size: 15px;
     margin-bottom: -10px;
