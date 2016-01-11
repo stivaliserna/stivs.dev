@@ -1,16 +1,16 @@
 .nav p {
   text-align: right;
   color: #b8b8b8;
-  font-size: 20px;
+  font-size: 15px;
   padding: 14px 10px;
   font-family: Crimson Text;
-  margin-top: 15px;
+  margin-bottom: -10px;
 }
 
 .jumbotron {
-  border-color: #CE1D41;
+  border-color: #E0315F;
   border-style: solid;
-  border-width: 50px 100px 50px 100px;
+  border-width: 25px;
   position: relative;
   margin-top:10px;
   background-color: #f7f7f7;
@@ -18,7 +18,7 @@
 
 .jumbotron h1 {
   color: #202020;
-  font-size: 55px;  
+  font-size: 30px;  
   font-family: Open Sans;
   font-weight: 800;
   margin-top: 20px;
@@ -27,7 +27,7 @@
 }
 
 .jumbotron h2 {
-  font-size: 30px;
+  font-size: 20px;
   color: #202020;
   font-family: Open Sans;
   text-align: center;
@@ -39,7 +39,7 @@
 
   font-family: serif;
   color: #444444;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 0px;
   text-shadow: none;
   text-align: center;
@@ -48,57 +48,57 @@
 .jumbotron ul li a i {
     margin-top: 15px;
     color: black;
-    font-size: 1.9em;
+    font-size: 1.5em;
 }
 
 .learn-more h3 {
     color: #171717;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     font-family: Open Sans;
+    margin-top: -7px;
 }
 
 .learn-more p {
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 13px;
     text-align: center;
     font-family: Open Sans;
     color: #202020;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .nav p {
-    font-size: 15px;
-    margin-bottom: -10px;
+    font-size: 20px;
+    margin-top: 15px;
   }
 
   .jumbotron {
-      border-width: 25px;
-      border-color: #E0315F;
+      border-width: 50px 100px 50px 100px;
+      border-color: #CE1D41;
   }
 
   .jumbotron h1 {
-      font-size: 30px;
+      font-size: 55px;
   }
 
   .jumbotron h2 {
-      font-size: 20px;
+      font-size: 30px;
   }
 
   .jumbotron p {
-      font-size: 15px;
+      font-size: 20px;
   }
 
   .jumbotron ul li a i {
-     font-size: 1.5em;
+     font-size: 1.9em;
   }
 
   .learn-more h3 {
-      font-size: 15px;
-      margin-top: -7px;
+      font-size: 20px;
   }
 
   .learn-more p {
-      font-size: 13px;
+      font-size: 15px;
   }
 }
