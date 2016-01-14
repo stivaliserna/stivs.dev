@@ -67,7 +67,7 @@
     color: #202020;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .nav p {
     font-size: 20px;
     margin-top: 15px;
@@ -100,5 +100,15 @@
 
   .learn-more p {
       font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+      background-image: url("sakura.png"); 
+      background-size: 100%;
+  }
+  .nav p {
+    text-align: left;
   }
 }
