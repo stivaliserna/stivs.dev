@@ -56,7 +56,7 @@
     font-size: 15px;
     text-align: center;
     font-family: Open Sans;
-    margin-top: -7px;
+    margin-top: 10px;
 }
 
 .learn-more p {
@@ -92,7 +92,6 @@
 
   .jumbotron h1 {
     font-size: 40px;
-    margin-top: 40px;
   }
 
   .jumbotron h2 {
