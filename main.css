@@ -67,23 +67,74 @@
     color: #202020;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 480px) {
   .nav p {
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 17px;
+    color: #CE1D41;
   }
 
   .jumbotron {
-      border-width: 50px 100px 50px 100px;
+    border: none;
+    background-color: white;
+    margin-top: -10px;
+    margin-bottom: 5px;
+  }
+
+  .image {
+    background-image: url("stivali.jpg");
+    background-size: 110%;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+
+  .jumbotron h2 {
+    font-size: 23px;
+    margin-top: 27px;
+  }
+
+  .jumbotron p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .jumbotron ul li a i {
+    font-size: 1.7em;
+  }
+
+  .learn-more h3 {
+    font-weight: bold;
+  }
+
+  .learn-more p {
+    margin-bottom: 30px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .nav p {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+
+  .jumbotron {
       border-color: #CE1D41;
   }
 
   .jumbotron h1 {
-      font-size: 55px;
+      font-size: 45px;
   }
 
   .jumbotron h2 {
-      font-size: 30px;
+      font-size: 25px;
   }
 
   .jumbotron p {
