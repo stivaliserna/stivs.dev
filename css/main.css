@@ -81,7 +81,7 @@
   }
 
   .image {
-    background-image: url("img/stivali.jpg");
+    background-image: url("../img/stivali.jpg");
     background-size: 110%;
     height: 250px;
     width: 250px;
@@ -156,7 +156,7 @@
 
 @media only screen and (min-width: 1200px) {
   body {
-      background-image: url("img/sakura.png"); 
+      background-image: url("../img/sakura.png"); 
       background-size: 100%;
   }
   .nav p {
