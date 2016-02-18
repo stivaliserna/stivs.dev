@@ -162,6 +162,10 @@
   .nav p {
     text-align: left;
   }
+  
+  .jumbotron {
+    border-width: 50px 80px 50px 80px;
+  }
 
   .jumbotron {
     border-width: 50px 80px 50px 80px;
