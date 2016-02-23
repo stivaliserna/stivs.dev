@@ -1,0 +1,15 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.html]
+tab_width = 2
+
+[*.{css,js,md}]
+indent_style = space
+indent_size = 2
+
+[*.{css, js}]
+trim_trailing_whitespace = true
