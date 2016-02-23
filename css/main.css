@@ -46,26 +46,26 @@
 }
 
 .jumbotron ul li a i {
-    margin-top: 15px;
-    color: black;
-    font-size: 1.5em;
+  margin-top: 15px;
+  color: black;
+  font-size: 1.5em;
 }
 
 .learn-more h3 {
-    color: #171717;
-    font-size: 15px;
-    text-align: center;
-    font-family: Open Sans;
-    margin-top: 20px;
-    
+  color: #171717;
+  font-size: 15px;
+  text-align: center;
+  font-family: Open Sans;
+  margin-top: 20px;
+  
 }
 
 .learn-more p {
-    font-size: 13px;
-    margin-bottom: 13px;
-    text-align: center;
-    font-family: Open Sans;
-    color: #202020;
+  font-size: 13px;
+  margin-bottom: 13px;
+  text-align: center;
+  font-family: Open Sans;
+  color: #202020;
 }
 
 @media only screen and (max-width: 480px) {
@@ -126,38 +126,38 @@
   }
 
   .jumbotron {
-      border-color: #CE1D41;
+    border-color: #CE1D41;
   }
 
   .jumbotron h1 {
-      font-size: 45px;
+    font-size: 45px;
   }
 
   .jumbotron h2 {
-      font-size: 25px;
+    font-size: 25px;
   }
 
   .jumbotron p {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .jumbotron ul li a i {
-     font-size: 1.9em;
-  }
+   font-size: 1.9em;
+ }
 
-  .learn-more h3 {
-      font-size: 20px;
-  }
+ .learn-more h3 {
+  font-size: 20px;
+}
 
-  .learn-more p {
-      font-size: 15px;
-  }
+.learn-more p {
+  font-size: 15px;
+}
 }
 
 @media only screen and (min-width: 1200px) {
   body {
-      background-image: url("../img/sakura.png"); 
-      background-size: 100%;
+    background-image: url("../img/sakura.png"); 
+    background-size: 100%;
   }
   .nav p {
     text-align: left;
