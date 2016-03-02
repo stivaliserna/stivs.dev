@@ -7,4 +7,4 @@ and was hosted for free through GitHub Pages.
 
 ## Copyright and license
 
-Code and documentation copyright 2016 Stívali Serna. Code released under [the MIT license](http://choosealicense.com/licenses/mit/). Docs released under [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+Code and documentation copyright 2016 Stívali Serna. Code released under [the MIT license](https://github.com/stivaliserna/stivaliserna.github.io/blob/master/License.md). Docs released under [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/).
