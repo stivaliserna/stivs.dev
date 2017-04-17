@@ -1,5 +1,5 @@
 .nav {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .line {
@@ -91,7 +91,7 @@ h4 {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
