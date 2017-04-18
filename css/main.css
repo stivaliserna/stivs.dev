@@ -17,12 +17,15 @@
   font-style: italic;
 }
 
+.container {
+  min-height: calc(100vh - 100px)
+}
+
 .avatar {
   background-image: url("../img/stivali.jpg");
   background-size: 110%;
   height: 8em;
   width: 8em;
-  border-radius: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -91,20 +94,54 @@ h4 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 750px) {
   .avatar {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    float: right;
   }
   .avatar:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
+
+  h1 {
+    text-align: left;
+    font-size: 6em;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  h4 {
+    font-size: 1.6em;
+  }
+
+  .break {
+    border-width: 2px;
+    max-width: 15em;
+  }
+
+  .intro {
+    font-size: 1.6em;
+    text-align: center;
+    max-width: 25em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    line-height: 1.8em;
+  }
+
+  .mail {
+    font-size: 1.6em;
+  }
+
 }
