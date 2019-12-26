@@ -1,0 +1,22 @@
+.code-bubble {
+    width: 60em;
+}
+
+.code-bubble .lines path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.code-bubble.animating .lines path{
+  animation: coding 350ms ease-out forwards;
+}
+
+@keyframes coding {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.select-all {
+  display: none;
+}
