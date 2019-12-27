@@ -1,5 +1,45 @@
+@import 'https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap-reboot.min.css';
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.title {
+  color: #262626;
+  font-family: 'Poiret One', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+.subtitle {
+  color: #6D6D6D;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+.bubbles {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  width: 100%;
+}
+
 .code-bubble {
-    width: 60em;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.code-bubble,
+.draw-bubble,
+.blender-bubble {
+  height: 10em;
+  width: 10em;
 }
 
 .code-bubble .lines path {
@@ -19,4 +59,43 @@
 
 .select-all {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .title {
+    font-size: 4em;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 4em;
+    margin-top: 1em;
+  }
+
+  .code-bubble,
+  .draw-bubble,
+  .blender-bubble {
+    height: 15em;
+    width: 15em;
+  }
+}
+
+@media (min-width: 992px) {
+  .bubbles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .code-bubble {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .code-bubble,
+  .draw-bubble,
+  .blender-bubble {
+    height: 20em;
+    width: 20em;
+  }
 }
