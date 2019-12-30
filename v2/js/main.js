@@ -31,4 +31,54 @@ const animateCodeBubble = () => {
   startTyping();
 };
 
+const animateDrawBubble = () => {
+  const petal = document.querySelector(".petal");
+  const touchActive = document.querySelector(".touch-active")
+  const touch = document.querySelector(".touch")
+
+  const changeSecondColor = () => {
+    touch.style.transform = "translate(9%, -2.5%)"
+    touchActive.style.transform = "translate(9%, -2.5%)"
+    petal.style.fill = "#9E85A6"
+    setTimeout(changeFirstColor, 2000)
+  }
+
+  const changeFirstColor = () => {
+    touch.style.transform = "translate(6%, -2.5%)"
+    touchActive.style.transform = "translate(6%, -2.5%)"
+    petal.style.fill = "#845C90";
+    setTimeout(changeSecondColor, 700)
+  }
+
+  changeFirstColor()
+}
+
+const animateBlenderBubble = () => {
+  const cube = document.querySelector(".cube")
+  const xAxis = document.querySelector(".x")
+  const yAxis = document.querySelector(".y")
+
+  const rotateFront = () => {
+    cube.classList.remove("show-right")
+
+    cube.classList.add("show-front")
+    xAxis.style.stroke = "#CC4452"
+    yAxis.style.stroke = "#2F79CB"
+
+    setTimeout(rotateRight, 2000)
+  }
+
+  const rotateRight = () => {
+    cube.classList.remove("show-front")
+
+    cube.classList.add("show-right")
+    xAxis.style.stroke = "#BDF971"
+    setTimeout(rotateFront, 700)
+  }
+
+  rotateRight()
+}
+ 
 animateCodeBubble();
+animateDrawBubble();
+animateBlenderBubble();
