@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  align-content: start;
+  align-content: center;
   align-items: center;
   display: grid;
   grid-gap: 1.5rem;
@@ -14,7 +14,6 @@ body {
   justify-items: start;
   margin: 0 auto;
   max-width: 20rem;
-  min-height: 100vh;
   padding: 1rem;
 }
 
@@ -94,26 +93,24 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-width: 60rem;
+    min-height: 100vh;
   }
 
   .code-bubble {
     grid-column: 1;
     grid-row: 1 / span 2;
-    justify-self: end;
   }
 
   .title {
     align-self: end;
     grid-column: 2;
     grid-row: 1;
-    justify-self: start;
   }
 
   .info {
     align-self: start;
     grid-column: 2 / 2;
     grid-row: 2;
-    justify-self: start;
     margin-top: 0;
   }
 
