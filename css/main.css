@@ -36,6 +36,11 @@ body {
 
 .work {
   color: #2D0140;
+  text-decoration: underline;
+}
+
+.work:hover {
+  color: #2D0140;
 }
 
 .social {

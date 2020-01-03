@@ -1,5 +1,5 @@
 
-This website was coded using only HTML, CSS, Bootstrap, 
+This website was coded using only HTML, CSS, JavaScript, 
 and was hosted for free through GitHub Pages. 
 
 ## Copyright and license
