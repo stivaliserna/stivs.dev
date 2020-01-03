@@ -1,5 +1,3 @@
-@import 'https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap-reboot.min.css';
-
 body {
   line-height: 1.3;
   background-color: #D8D9F2;
@@ -34,6 +32,10 @@ body {
   color: #2D0140;
   font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
+}
+
+.work {
+  color: #2D0140;
 }
 
 .social {
