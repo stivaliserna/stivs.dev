@@ -1,8 +1,8 @@
-const animateCodeBubble = () => {
+export const animateCodeBubble = () => {
   const codeBubble = document.querySelector(".code-bubble");
-  const highlight = document.querySelector(".select-all");
-  const linesGroup = document.querySelector(".lines");
-  const lines = [...document.querySelectorAll(".lines path")];
+  const highlight = document.querySelector(".select-all") as HTMLElement;
+  const linesGroup = document.querySelector(".lines") as HTMLElement;
+  const lines = [...document.querySelectorAll(".lines path")] as HTMLElement[];
 
   lines.forEach((line, i) => {
     line.style.animationDelay = `${i * 35}ms`;
@@ -18,7 +18,7 @@ const animateCodeBubble = () => {
   const selectAll = () => {
     highlight.style.display = "block";
 
-    setTimeout(deleteCode, 350);
+    setTimeout(deleteCode, 400);
   };
 
   const startTyping = () => {

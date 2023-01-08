@@ -1,0 +1,132 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+  emoji: string;
+  isAnimated?: boolean;
+}
+
+const { href, title, body, emoji, isAnimated = true } = Astro.props;
+
+const hueColor = Math.floor(Math.random() * (360 - 0 + 1)) + 0;
+const emojiBackground = `hsla(${hueColor}, 70%, 50%, 80%)`;
+---
+
+<li class={`link-card ${isAnimated && "is-animated"}`}>
+  <a href={href}>
+    {
+      isAnimated && (
+        <div class="emoji-wrapper">
+          <span>{emoji}</span>
+        </div>
+      )
+    }
+    <div>
+      <h2>
+        {title}
+      </h2>
+      <p>
+        {body}
+      </p>
+    </div>
+  </a>
+</li>
+
+<style define:vars={{ emojiBackground }}>
+  .link-card {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    list-style: none;
+    transition: all 300ms ease-in-out;
+  }
+
+  .link-card > a {
+    border-radius: 0.35rem;
+    display: block;
+    line-height: 1.4;
+    opacity: 0.8;
+    padding: 1rem;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .link-card.is-animated > a {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .link-card h2 {
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .link-card.is-animated h2 {
+    background: linear-gradient(
+      to right,
+      var(--emojiBackground),
+      var(--emojiBackground) 50%,
+      var(--secondary) 50%
+    );
+    background-clip: text;
+    background-size: 200% 100%;
+    background-position: 100%;
+    overflow: hidden;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: var(--gray);
+  }
+
+  .emoji-wrapper {
+    align-items: center;
+    background-color: var(--emojiBackground);
+    border-radius: 50%;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+  }
+
+  .emoji-wrapper span {
+    font-size: 2rem;
+  }
+
+  .link-card:is(:hover, :focus-within) {
+    transform: scale(1.05);
+  }
+
+  .link-card:is(:hover, :focus-within) h2 {
+    background-position: 0 100%;
+  }
+
+  @media (min-width: 576px) {
+    .link-card.is-animated > a {
+      grid-template-columns: 1fr 6fr;
+    }
+
+    .emoji-wrapper {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    .emoji-wrapper span {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .link-card.is-animated > a {
+      grid-template-columns: 1fr 8fr;
+    }
+  }
+</style>

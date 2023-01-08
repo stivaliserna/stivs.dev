@@ -1,0 +1,37 @@
+---
+import Footer from "../components/Footer.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <main>
+    <h1>{frontmatter.title}</h1>
+    <p class="pub-date">{frontmatter.pubDate}</p>
+    <slot />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    max-width: 53rem;
+    padding: 2rem;
+  }
+
+  main :global(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--ff-secondary);
+    color: var(--secondary);
+  }
+
+  main :global(p) {
+    font-family: var(--ff-secondary);
+    color: var(--gray);
+  }
+
+  .pub-date {
+    margin-bottom: 2rem;
+  }
+</style>

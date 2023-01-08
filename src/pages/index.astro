@@ -1,0 +1,145 @@
+---
+import Card from "../components/Card.astro";
+import CodeWindow from "../components/CodeWindow.astro";
+import Social from "../components/Social.astro";
+import Layout from "../layouts/Layout.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+---
+
+<Layout title="Stívali Serna">
+  <main>
+    <div class="wrapper">
+      <div class="title">
+        <h1 class="name">Stívali Serna</h1>
+        <h4 class="role">Web Developer</h4>
+      </div>
+      <CodeWindow />
+      <div class="info">
+        <div class="title">
+          <h1 class="name">Stívali Serna</h1>
+          <h4 class="role">Web Developer</h4>
+        </div>
+        <p class="description">
+          I've been doing fun stuff for the web the last five years and
+          currently I'm a Software Developer at
+          <a class="work" href="https://www.adevinta.com/">Adevinta Spain</a>.
+          I'm really into web animations, digital illustration and 3D modeling.
+          I also would like to visit the Guggenheim Museum.
+        </p>
+        <Social />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+  }
+
+  .wrapper {
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 45rem;
+    padding: 2rem;
+  }
+
+  .name {
+    color: var(--primary);
+    font-family: var(--ff-primary);
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .role {
+    color: var(--secondary);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+  }
+
+  .info .title {
+    display: none;
+  }
+
+  .description {
+    color: var(--secondary);
+    font-family: var(--ff-secondary);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .work {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+
+  .work:hover {
+    color: var(--secondary);
+  }
+
+  .blog {
+    margin-bottom: 2rem;
+  }
+
+  .blog a {
+    color: var(--secondary);
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 576px) {
+    .wrapper {
+      max-width: 30rem;
+    }
+
+    .name {
+      font-size: 3.5rem;
+    }
+
+    .role {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .wrapper {
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      max-width: 60rem;
+      min-height: 100vh;
+    }
+
+    .info {
+      margin-top: 0;
+    }
+
+    .description {
+      line-height: 1.5;
+      margin-bottom: 2.5rem;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .info .title {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper {
+      grid-template-columns: 4fr 6fr;
+      max-width: 80rem;
+    }
+
+    .description {
+      max-width: 35em;
+    }
+  }
+</style>

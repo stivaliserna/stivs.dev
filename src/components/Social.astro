@@ -1,0 +1,53 @@
+---
+export interface Props {
+  isFooter?: boolean;
+}
+
+const { isFooter = false } = Astro.props;
+---
+
+<div class={`social ${isFooter && "isFooter"}`}>
+  <a class="social-link" href="https://github.com/stivaliserna">
+    <img src="/icons/github.svg" alt="GitHub logo" />
+  </a>
+  <a class="social-link" href="https://www.linkedin.com/in/stivaliserna/">
+    <img src="/icons/linkedin.svg" alt="LinkedIn logo" />
+  </a>
+  <a class="social-link" href="mailto:stivaliserna08@gmail.com">
+    <img src="/icons/envelope.svg" alt="Email icon" />
+  </a>
+  <a class="social-link" href="https://codepen.io/stivaliserna">
+    <img src="/icons/codepen.svg" alt="CodePen logo" />
+  </a>
+</div>
+
+<style>
+  .social {
+    align-items: center;
+    display: flex;
+  }
+
+  .social-link {
+    margin-right: 1.5rem;
+    opacity: 1;
+    transition: opacity 300ms ease;
+    width: 1.5rem;
+  }
+
+  .isFooter .social-link {
+    margin-right: 1rem;
+    width: 1rem;
+  }
+
+  .social-link:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: 576px) {
+    .social-link,
+    .isFooter .social-link {
+      margin-right: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+</style>

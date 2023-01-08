@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+---
+
+<Layout title="Posts - Stívali Serna">
+  <main>
+    <div>
+      <h1 class="title"><strong>Hola!</strong> 👋</h1>
+      <p class="subtitle">
+        I'm using this space to share some thoughts and learnings, mostly about
+        tech, in English and Spanish.
+      </p>
+    </div>
+    <ul role="list" class="link-card-grid">
+      {
+        allPosts.map((post) => (
+          <Card
+            href={post.frontmatter.url}
+            title={post.frontmatter.title}
+            body={post.frontmatter.description}
+            emoji={post.frontmatter.emoji}
+          />
+        ))
+      }
+    </ul>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    max-width: 53rem;
+    padding: 2rem;
+  }
+
+  .title,
+  .subtitle {
+    font-family: var(--ff-secondary);
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .link-card-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+</style>
