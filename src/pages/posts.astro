@@ -11,13 +11,13 @@ const allPosts = await Astro.glob("../pages/posts/*.mdx");
     <div>
       <h1 class="title"><strong>Hola!</strong> 👋</h1>
       <p class="subtitle">
-        I'm using this space to share some thoughts and learnings, mostly about
-        tech, in English and Spanish.
+        I'm using this space to share some thoughts and learnings, in English
+        and Spanish.
       </p>
     </div>
     <ul role="list" class="link-card-grid">
       {
-        allPosts.map((post) => (
+        [].map((post) => (
           <Card
             href={post.frontmatter.url}
             title={post.frontmatter.title}
