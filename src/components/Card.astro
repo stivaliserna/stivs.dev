@@ -6,14 +6,13 @@ export interface Props {
 }
 
 const { post, isFullyStyled = true } = Astro.props;
-console.log({ isFullyStyled });
 
 const hueColor = Math.floor(Math.random() * (360 - 0 + 1)) + 0;
 const titleColor = `hsla(${hueColor}, 70%, 50%, 80%)`;
 ---
 
 <li class={`link-card ${isFullyStyled && "is-fully-styled"}`}>
-  <a href={post.data.url}>
+  <a href={`/posts/${post.slug}`}>
     <div class="heading-wrapper">
       <h2 class="title">
         {post.data.title}

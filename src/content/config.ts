@@ -8,8 +8,7 @@ const postsCollection = defineCollection({
       year: "numeric",
       month: "short",
       day: "2-digit",
-    })),
-    url: z.string()
+    }))
   }),
 });
 
