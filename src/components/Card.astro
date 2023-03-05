@@ -1,39 +1,32 @@
 ---
+import type { CollectionEntry } from "astro:content";
 export interface Props {
-  title: string;
-  body: string;
-  href: string;
-  emoji: string;
-  isAnimated?: boolean;
+  post: CollectionEntry<"blog">;
+  isFullyStyled?: boolean;
 }
 
-const { href, title, body, emoji, isAnimated = true } = Astro.props;
+const { post, isFullyStyled = true } = Astro.props;
+console.log({ isFullyStyled });
 
 const hueColor = Math.floor(Math.random() * (360 - 0 + 1)) + 0;
-const emojiBackground = `hsla(${hueColor}, 70%, 50%, 80%)`;
+const titleColor = `hsla(${hueColor}, 70%, 50%, 80%)`;
 ---
 
-<li class={`link-card ${isAnimated && "is-animated"}`}>
-  <a href={href}>
-    {
-      isAnimated && (
-        <div class="emoji-wrapper">
-          <span>{emoji}</span>
-        </div>
-      )
-    }
-    <div>
-      <h2>
-        {title}
+<li class={`link-card ${isFullyStyled && "is-fully-styled"}`}>
+  <a href={post.data.url}>
+    <div class="heading-wrapper">
+      <h2 class="title">
+        {post.data.title}
       </h2>
-      <p>
-        {body}
-      </p>
+      <p class="date">{post.data.pubDate}</p>
     </div>
+    <p class="description">
+      {post.data.description}
+    </p>
   </a>
 </li>
 
-<style define:vars={{ emojiBackground }}>
+<style define:vars={{ titleColor }}>
   .link-card {
     background-color: var(--white);
     border-radius: 0.5rem;
@@ -52,23 +45,26 @@ const emojiBackground = `hsla(${hueColor}, 70%, 50%, 80%)`;
     width: 100%;
   }
 
-  .link-card.is-animated > a {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+  .link-card.is-fully-styled .heading-wrapper .heading-wrapper {
+    display: block;
   }
 
-  .link-card h2 {
+  .date {
+    margin: 0;
+    color: var(--gray);
+  }
+
+  .title {
     color: var(--secondary);
     font-size: 1.25rem;
     margin: 0;
   }
 
-  .link-card.is-animated h2 {
+  .link-card.is-fully-styled .title {
     background: linear-gradient(
       to right,
-      var(--emojiBackground),
-      var(--emojiBackground) 50%,
+      var(--titleColor),
+      var(--titleColor) 50%,
       var(--secondary) 50%
     );
     background-clip: text;
@@ -81,52 +77,30 @@ const emojiBackground = `hsla(${hueColor}, 70%, 50%, 80%)`;
     -webkit-text-fill-color: transparent;
   }
 
-  p {
+  .description {
     margin-top: 0.5rem;
     margin-bottom: 0;
     color: var(--gray);
-  }
-
-  .emoji-wrapper {
-    align-items: center;
-    background-color: var(--emojiBackground);
-    border-radius: 50%;
-    display: flex;
-    height: 3rem;
-    justify-content: center;
-    width: 3rem;
-  }
-
-  .emoji-wrapper span {
-    font-size: 2rem;
   }
 
   .link-card:is(:hover, :focus-within) {
     transform: scale(1.05);
   }
 
-  .link-card:is(:hover, :focus-within) h2 {
+  .link-card:is(:hover, :focus-within) .title {
     background-position: 0 100%;
   }
 
   @media (min-width: 576px) {
-    .link-card.is-animated > a {
-      grid-template-columns: 1fr 6fr;
+    .link-card.is-fully-styled .heading-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .emoji-wrapper {
-      width: 4rem;
-      height: 4rem;
-    }
-
-    .emoji-wrapper span {
-      font-size: 2.5rem;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .link-card.is-animated > a {
-      grid-template-columns: 1fr 8fr;
+    .date {
+      margin-top: 0.25rem;
+      color: var(--gray);
     }
   }
 </style>

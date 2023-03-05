@@ -1,10 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
 import CodeWindow from "../components/CodeWindow.astro";
 import Social from "../components/Social.astro";
 import Layout from "../layouts/Layout.astro";
 
-const allPosts = await Astro.glob("../pages/posts/*.mdx");
+const posts = await getCollection("blog");
+const latestBlogEntry = posts
+  .sort((a, b) => +b.data.pubDate - +a.data.pubDate)
+  .pop();
 ---
 
 <Layout title="Stívali Serna">
@@ -27,10 +31,23 @@ const allPosts = await Astro.glob("../pages/posts/*.mdx");
           I'm really into web animations, digital illustration and 3D modeling.
           I also would like to visit the Guggenheim Museum.
         </p>
+        {
+          latestBlogEntry && (
+            <div class="blog">
+              <a href="/posts">
+                Check all my posts <span>&rarr;</span>
+              </a>
+              <Card post={latestBlogEntry} isFullyStyled={false} />
+            </div>
+          )
+        }
         <Social />
       </div>
     </div>
   </main>
+  <script>
+    import "../scripts/codeBubble.js";
+  </script>
 </Layout>
 
 <style>

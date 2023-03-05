@@ -3,29 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 
-const allPosts = await Astro.glob("../pages/posts/*.mdx");
+import { getCollection } from "astro:content";
+const allBlogPosts = await getCollection("blog");
 ---
 
 <Layout title="Posts - Stívali Serna">
   <main>
     <div>
       <h1 class="title"><strong>Hola!</strong> 👋</h1>
-      <p class="subtitle">
-        I'm using this space to share some thoughts and learnings, in English
-        and Spanish.
-      </p>
+      <p class="subtitle">This is where I spill my thoughts and learnings.</p>
     </div>
     <ul role="list" class="link-card-grid">
-      {
-        [].map((post) => (
-          <Card
-            href={post.frontmatter.url}
-            title={post.frontmatter.title}
-            body={post.frontmatter.description}
-            emoji={post.frontmatter.emoji}
-          />
-        ))
-      }
+      {allBlogPosts.map((post) => <Card post={post} />)}
     </ul>
   </main>
   <Footer />

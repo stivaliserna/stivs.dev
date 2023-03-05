@@ -1,8 +1,8 @@
-export const animateCodeBubble = () => {
-  const codeBubble = document.querySelector(".code-bubble");
+export const animateCodeBubble = (): void => {
+  const codeBubble = document.querySelector(".code-bubble") as HTMLElement;
   const highlight = document.querySelector(".select-all") as HTMLElement;
   const linesGroup = document.querySelector(".lines") as HTMLElement;
-  const lines = [...document.querySelectorAll(".lines path")] as HTMLElement[];
+  const lines = Array.from(document.querySelectorAll(".lines path")) as HTMLElement[];
 
   lines.forEach((line, i) => {
     line.style.animationDelay = `${i * 35}ms`;

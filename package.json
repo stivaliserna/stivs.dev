@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.14.0",
-    "astro": "^1.8.0"
+    "astro": "^2.0.17"
   }
 }
