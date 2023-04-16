@@ -12,7 +12,10 @@ const { frontmatter } = Astro.props;
     <meta property="og:type" content="article" />
     {
       frontmatter.image && (
-        <meta property="og:image" content={frontmatter.image} />
+        <meta
+          property="og:image"
+          content={`${Astro.site?.href ?? ""}${frontmatter.image}`}
+        />
       )
     }
   </Fragment>
