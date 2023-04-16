@@ -2,6 +2,15 @@
 import Footer from "../components/Footer.astro";
 import Layout from "./Layout.astro";
 
+const getUrl = (site, image) => {
+  if (!site || !image) return undefined;
+
+  const url = new URL(site.href);
+  url.pathname = image;
+
+  return url.href;
+};
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -14,7 +23,7 @@ const { frontmatter } = Astro.props;
       frontmatter.image && (
         <meta
           property="og:image"
-          content={`${Astro.site?.href ?? ""}${frontmatter.image}`}
+          content={getUrl(Astro.site, frontmatter.image)}
         />
       )
     }
