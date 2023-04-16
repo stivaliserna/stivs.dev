@@ -67,6 +67,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
+"impossible-layout-with-resize-observer.mdx": {
+  id: "impossible-layout-with-resize-observer.mdx",
+  slug: "impossible-layout-with-resize-observer",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
 "press-a-to-start-a-new-game.mdx": {
   id: "press-a-to-start-a-new-game.mdx",
   slug: "press-a-to-start-a-new-game",
