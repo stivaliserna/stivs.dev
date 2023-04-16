@@ -16,6 +16,8 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title}>
   <Fragment slot="meta">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@stivaliserna" />
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
     <meta property="og:type" content="article" />
