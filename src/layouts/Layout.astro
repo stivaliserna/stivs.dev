@@ -26,6 +26,7 @@ const { title } = Astro.props;
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <slot name="meta" />
   </head>
   <body>
     <slot />

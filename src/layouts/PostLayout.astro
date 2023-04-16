@@ -6,6 +6,16 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
+  <Fragment slot="meta">
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:type" content="article" />
+    {
+      frontmatter.image && (
+        <meta property="og:image" content={frontmatter.image} />
+      )
+    }
+  </Fragment>
   <main>
     <h1>{frontmatter.title}</h1>
     <p class="pub-date">{frontmatter.pubDate}</p>
