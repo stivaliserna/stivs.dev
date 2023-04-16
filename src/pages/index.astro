@@ -7,7 +7,10 @@ import Layout from "../layouts/Layout.astro";
 
 const posts = await getCollection("blog");
 const latestBlogEntry = posts
-  .sort((a, b) => +b.data.pubDate - +a.data.pubDate)
+  .sort(
+    (a, b) =>
+      new Date(a.data.pubDate).valueOf() - new Date(b.data.pubDate).valueOf()
+  )
   .pop();
 ---
 
